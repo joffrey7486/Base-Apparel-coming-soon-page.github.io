@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Josefin Sans', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "logo img"
+    "h1 img"
+    "p img"
+    "mail img";
+}
+.logo{
+    grid-area: logo;
+    background-image: url(/images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 11rem;
+    margin: 3rem 0 0 5rem;
+}
+h1{
+    grid-area: h1;
+    text-transform: uppercase;
+    text-align: center;
+    color: #403738;
+    font-weight: 400;
+    font-size: 5rem;
+    margin: 5rem 23rem 0 5rem;
+    letter-spacing: 1rem;
+    line-height: 5.5rem;
+}
+h1 span{
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+p{
+    grid-area: p;
+    margin: 2rem 23rem 0rem 5rem;
+    font-weight: 400;
+    color: hsl(0, 36%, 70%);
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+}
+.form{
+    grid-area: mail;
+    margin-left: 5rem;
+}
+input{
+    height: 3.5rem;
+    width: 28rem;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 30px;
+    padding-left: 2rem;
+}
+::placeholder{
+    color:hsl(0, 36%, 70%);
+    font-size: 1rem;
+    opacity: .5;
+}
+.btn{
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    height: 3.5rem;
+    width: 6rem;
+    position: relative;
+    bottom: 0rem;
+    left: -4rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.error{
+    color: hsl(0, 93%, 68%);
+    position: absolute;
+    bottom: 4.5rem;
+    left: 1rem;
+    display: none;
+}
+
+#icon{
+    background-image: url(/images/icon-error.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    font-size: 1.5rem;
+    color: hsl(0, 93%, 68%);
+    height: 6rem;
+    width: 2rem;
+    bottom: 4.4rem;
+    left: 26rem;
+    display: none;
+}
+
+.img{
+    grid-area: img;
+    background-image: url(/images/hero-desktop.jpg);
+    background-size: cover;
+    width: 100%;
+}
+.attribution {font-size: 20px;text-align: center;position: relative;bottom: -1rem;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 1440px) {
+    h1{
+        margin: 5rem 15rem 0 5rem;
+    }
+    p{
+        margin: 2rem 12rem 0rem 5rem;
+    }
+    .error{
+        bottom: 3.5rem;
+    }
+    #icon{
+        bottom: 3.5rem;
+    }
+    .btn{
+        bottom: 0rem;
+    }
+}
+@media (max-width: 1258px) {
+    .btn{
+        bottom: 0rem;
+        left: -5rem;
+    }
+    .error{
+        bottom: 3.6rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .card{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "logo"
+        "img"
+        "h1"
+        "p"
+        "mail";
+        }
+        .logo{
+            background-size: auto;
+            height: 5rem;
+        }
+        .img{
+            background-image: url(/images/hero-mobile.jpg);
+            height: 26rem;
+            width: 100vw;
+        }
+        h1{
+            margin: 4rem 5rem 0 5rem;
+            font-size: 4rem;
+            text-align: center;
+            font-weight: 400;
+            line-height: 4.5rem;
+            letter-spacing: .6rem;
+        }
+        h1 span{
+            font-weight: 300;
+        }
+        p{
+            text-align: center;
+            margin: 2rem 6rem 0rem 6rem;
+            font-size: 1.1rem;
+        }
+        .form{
+            margin: 2rem 4rem 0 4rem;
+        }
+        .btn{
+            bottom: 3.5rem;
+            left: 24rem;
+        }
+        .error{
+            bottom: -15.3rem;
+            left: -1rem;
+        }
+        #icon{
+            bottom: -15.3rem;
+            left: 25rem;
+        }
+        .attribution{
+            bottom: -20rem;
+        }
+}
+@media (max-width: 425px) {
+    .logo{
+        width: 18rem;
+    }
+    h1{
+        width: 375px;
+        width: 375px;
+        margin: 3rem 0 0 0;
+        font-size: 3rem;
+        line-height: 3rem;
+        letter-spacing: .3rem;
+    }
+    p{
+        width: 375px;
+        margin: 2rem 0rem 0 0rem;
+        font-size: .9rem;
+    }
+    .form{
+        margin: 2rem 2rem 0 2rem;
+    }
+    input{
+        width: 16rem;
+    }
+    .btn{
+        left: -4rem;
+        bottom: 0rem;
+    }
+    .error{
+        bottom: -9rem;
+        left: -2rem;
+    }
+    #icon{
+        bottom: -9.9rem;
+        left: 12rem;
+    }
+    .attribution{
+        bottom: -16rem;
+    }
+}
+@media (max-width: 375px) {
+    .btn{
+        left: 13rem;
+        bottom: 3.5rem;
+    
+    }
+    .error{
+        bottom: -9rem;
+        left: -2rem;
+    }
+    #icon{
+        bottom: -9.8rem;;
+    }
+    .attribution{
+        bottom: -12rem;
+    }
+}
