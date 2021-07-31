@@ -18,7 +18,7 @@
 }
 .logo{
     grid-area: logo;
-    background-image: url(/images/logo.svg);
+    background-image: url(https://raw.githubusercontent.com/joffrey7486/Base-Apparel-coming-soon-page.github.io/193642e1f842b50e6231c35093acbe0987a1da4a/images/logo.svg);
     background-repeat: no-repeat;
     background-size: 11rem;
     margin: 3rem 0 0 5rem;
@@ -82,7 +82,7 @@ input{
 }
 
 #icon{
-    background-image: url(/images/icon-error.svg);
+    background-image: url(https://raw.githubusercontent.com/joffrey7486/Base-Apparel-coming-soon-page.github.io/193642e1f842b50e6231c35093acbe0987a1da4a/images/icon-error.svg);
     background-repeat: no-repeat;
     position: absolute;
     font-size: 1.5rem;
@@ -96,7 +96,7 @@ input{
 
 .img{
     grid-area: img;
-    background-image: url(/images/hero-desktop.jpg);
+    background-image: url(https://github.com/joffrey7486/Base-Apparel-coming-soon-page.github.io/blob/main/images/hero-desktop.jpg?raw=true);
     background-size: cover;
     width: 100%;
 }
@@ -146,7 +146,7 @@ input{
             height: 5rem;
         }
         .img{
-            background-image: url(/images/hero-mobile.jpg);
+            background-image: url(https://github.com/joffrey7486/Base-Apparel-coming-soon-page.github.io/blob/main/images/hero-mobile.jpg?raw=true);
             height: 26rem;
             width: 100vw;
         }
