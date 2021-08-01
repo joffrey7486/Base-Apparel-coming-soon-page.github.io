@@ -6,6 +6,9 @@
 .card{
     height: 100vh;
     width: 100vw;
+    background-image: url(https://raw.githubusercontent.com/joffrey7486/Base-Apparel-coming-soon-page.github.io/38c957b95575b377ed9fc774d6a54764a87c6e29/images/bg-pattern-desktop.svg);
+    background-size: calc(210vh / 2);
+    background-repeat: no-repeat;
     font-family: 'Josefin Sans', sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -138,6 +141,7 @@ p{
 }
 @media (max-width: 620px) {
     .card{
+        background-image: none;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: 
