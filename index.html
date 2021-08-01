@@ -23,13 +23,13 @@
           Hello fellow shoppers! We're currently building our new fashion store. 
           Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
-        <form class="form">
-            <input type="email" id="email" placeholder="Email Address" required/>
-            <button class="btn" type="submit">
-              <i class="uil uil-angle-right-b"></i>
-            </button>
-            <div id="icon"></div>
-            <p class="error"></p>
+        <form class="form_input">
+          <input class="email" type="text" name="email" id="email" placeholder="Email Address">
+          <span id="icon"></span>
+          <input class="submit" type="button" value="" id="submit" onclick="validateEmail(document.getElementById('email').value)">
+          <br>
+          <div id="error" class="msg"></div>
+          <div id="success" class="msg"></div>
         </form>
         <div class="img"></div>
       </div>
