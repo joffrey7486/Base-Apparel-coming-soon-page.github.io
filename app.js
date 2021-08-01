@@ -1,21 +1,33 @@
-/*// define all the variables to use 
-const form = document.querySelector('.form');
-const input = document.querySelector('input')
-const error_msg = document.querySelector('.error')
-const error_icon = document.getElementById('#icon')
+function validateEmail(email){
+    // all variables
+    const regExp =  /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
-// define the check function
-const validateEmail = (e) => {
-    //e.preventDefault();
-    if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
-        console.log("it's a correct email!!");
-        error_icon.style.display = "none";
-        error_msg.innerHTML = "";
+    let validEmail = regExp.test(email);
+
+    let error = document.getElementById('error')
+    error.style.color = "red";
+
+    let success = document.getElementById('success')
+    success.style.color = 'green'
+
+    let msgError = []
+    let msgSuccess = []
+    // function with true or false 
+    if(validEmail == true) { 
+        let email = document.getElementById('email');
+        email.style.border = '2px solid hsl(120,72%,52%)' 
+        let icon = document.getElementById('icon')   
+        icon.style.display = 'none'
+        msgSuccess.push('Submitted succesfully !!')
     } else {
-        console.log("not a correct email address");
-        error_msg.innerHTML = "Please provide a valid email";
-        error_msg.style.color = "hsl(0, 93%, 68%)";
-        error_icon.style.display = "block";
+        let email = document.getElementById('email');
+        email.style.border = '2px solid hsl(0,100%,50%)'
+        let icon = document.getElementById('icon')
+        icon.style.display = "inline-block"
+        msgError.push("Please provide a valid email !!")
     }
-};
-form.addEventListener("submit", validateEmail);
+
+    error.innerHTML = msgError.join('')
+    success.innerHTML = msgSuccess.join('')
+
+}
