@@ -22,6 +22,9 @@
     background-repeat: no-repeat;
     background-size: 11rem;
     margin: 3rem 0 0 5rem;
+    transform: translateX(100%);
+    animation: comingSide .8s ease forwards;
+    opacity: 0;
 }
 h1{
     grid-area: h1;
@@ -33,6 +36,9 @@ h1{
     margin: 5rem 23rem 0 5rem;
     letter-spacing: 1rem;
     line-height: 5.5rem;
+    transform: translateX(-100%);
+    animation: comingSide .8s ease forwards;
+    opacity: 0;
 }
 h1 span{
     font-weight: 300;
@@ -45,6 +51,9 @@ p{
     color: hsl(0, 36%, 70%);
     letter-spacing: 1px;
     line-height: 1.5rem;
+    transform: translateX(100%);
+    animation: comingSide .8s ease forwards;
+    opacity: 0;
 }
 .form_input {
     width: 22rem;
@@ -113,6 +122,12 @@ p{
 .attribution {font-size: 20px;text-align: center;position: relative;bottom: -1rem;}
 .attribution a { color: hsl(228, 45%, 44%); }
 
+@keyframes comingSide {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 @media (max-width: 1440px) {
     h1{
         margin: 5rem 15rem 0 5rem;
