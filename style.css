@@ -46,54 +46,64 @@ p{
     letter-spacing: 1px;
     line-height: 1.5rem;
 }
-.form{
-    grid-area: mail;
-    margin-left: 5rem;
-}
-input{
-    height: 3.5rem;
-    width: 28rem;
-    border: 1px solid hsl(0, 36%, 70%);
-    border-radius: 30px;
-    padding-left: 2rem;
-}
-::placeholder{
-    color:hsl(0, 36%, 70%);
-    font-size: 1rem;
-    opacity: .5;
-}
-.btn{
-    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    height: 3.5rem;
-    width: 6rem;
+.form_input {
+    width: 22rem;
+    height: 10rem;
+    text-align: center;
+    margin: 0 0 0 3rem;
     position: relative;
-    bottom: 0rem;
-    left: -4rem;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
 }
-.error{
-    color: hsl(0, 93%, 68%);
-    position: absolute;
-    bottom: 4.5rem;
-    left: 1rem;
-    display: none;
+  
+.form_input .email {
+    width: 310px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 50px;
+    outline: none;  
+    padding-left: 25px;
+    border: 1px solid hsl(0, 36%, 70%);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    color: hsl(0, 6%, 24%);
 }
-
+  
 #icon{
-    background-image: url(https://raw.githubusercontent.com/joffrey7486/Base-Apparel-coming-soon-page.github.io/193642e1f842b50e6231c35093acbe0987a1da4a/images/icon-error.svg);
+    background-image: url(/images/icon-error.svg);
     background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 50px;
     position: absolute;
-    font-size: 1.5rem;
-    color: hsl(0, 93%, 68%);
-    height: 6rem;
-    width: 2rem;
-    bottom: 4.4rem;
-    left: 26rem;
+    right:0;
+    margin-right: 60px;
     display: none;
 }
-
+  
+.form_input .email::placeholder {
+    color: hsl(0, 36%, 70%);
+    font-weight: 200;
+}
+  
+.form_input .submit {
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    border-radius: 50px;
+    border: 1px solid hsl(0, 36%, 70%);
+    outline:none;
+    cursor: pointer;
+  
+    background: url(https://raw.githubusercontent.com/joffrey7486/Base-Apparel-coming-soon-page.github.io/40312640670791642011de4ee955ce50d203323c/images/icon-arrow.svg),
+      linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.msg {
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 25px;
+}
 .img{
     grid-area: img;
     background-image: url(https://github.com/joffrey7486/Base-Apparel-coming-soon-page.github.io/blob/main/images/hero-desktop.jpg?raw=true);
@@ -110,26 +120,7 @@ input{
     p{
         margin: 2rem 12rem 0rem 5rem;
     }
-    .error{
-        bottom: 3.5rem;
-    }
-    #icon{
-        bottom: 3.5rem;
-    }
-    .btn{
-        bottom: 0rem;
-    }
 }
-@media (max-width: 1258px) {
-    .btn{
-        bottom: 0rem;
-        left: -5rem;
-    }
-    .error{
-        bottom: 3.6rem;
-    }
-}
-
 @media (max-width: 620px) {
     .card{
         grid-template-columns: 1fr;
@@ -166,20 +157,8 @@ input{
             margin: 2rem 6rem 0rem 6rem;
             font-size: 1.1rem;
         }
-        .form{
-            margin: 2rem 4rem 0 4rem;
-        }
-        .btn{
-            bottom: 3.5rem;
-            left: 24rem;
-        }
-        .error{
-            bottom: -15.3rem;
-            left: -1rem;
-        }
-        #icon{
-            bottom: -15.3rem;
-            left: 25rem;
+        .form_input{
+            margin: 4rem 0px 0px 7rem;
         }
         .attribution{
             bottom: -20rem;
@@ -202,41 +181,14 @@ input{
         margin: 2rem 0rem 0 0rem;
         font-size: .9rem;
     }
-    .form{
-        margin: 2rem 2rem 0 2rem;
-    }
-    input{
-        width: 16rem;
-    }
-    .btn{
-        left: -4rem;
-        bottom: 0rem;
-    }
-    .error{
-        bottom: -9rem;
-        left: -2rem;
-    }
-    #icon{
-        bottom: -9.9rem;
-        left: 12rem;
+    .form_input{
+        margin: 4rem 0 0 0rem;
     }
     .attribution{
         bottom: -16rem;
     }
 }
 @media (max-width: 375px) {
-    .btn{
-        left: 13rem;
-        bottom: 3.5rem;
-    
-    }
-    .error{
-        bottom: -9rem;
-        left: -2rem;
-    }
-    #icon{
-        bottom: -9.8rem;;
-    }
     .attribution{
         bottom: -12rem;
     }
