@@ -32,7 +32,6 @@
 h1{
     grid-area: h1;
     text-transform: uppercase;
-    text-align: center;
     color: #403738;
     font-weight: 400;
     font-size: 5rem;
@@ -137,6 +136,18 @@ p{
     }
     p{
         margin: 2rem 12rem 0rem 5rem;
+    }
+}
+@media (max-width: 1200px) {
+    .logo{
+    margin: 3rem 0 0 2rem
+    }
+    h1 {
+    margin: 4rem 5rem 0 3rem;
+    font-size: 4.5rem;
+    }
+    p {
+    margin: 2rem 2rem 0rem 3.5rem;
     }
 }
 @media (max-width: 620px) {
