@@ -162,6 +162,9 @@ p{
     p {
     margin: 2rem 0rem 0rem 1rem;
     }
+    .form_input {
+    margin: 0 0 0 0rem;
+    }
 }
 @media (max-width: 620px) {
     .card{
